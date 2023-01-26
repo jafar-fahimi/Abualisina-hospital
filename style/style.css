@@ -2,6 +2,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
+  /* box-sizing: border-box; */
 }
 .navbar-logos {
   width: 90%;
@@ -58,8 +59,8 @@
 }
 .navbar-tabs {
   box-sizing: border-box;
-  border-left:5px solid rgb(153, 255, 0);
-  border-right:5px solid rgb(153, 255, 0);
+  border-left: 5px solid rgb(153, 255, 0);
+  border-right: 5px solid rgb(153, 255, 0);
 }
 
 .header-div {
@@ -81,12 +82,7 @@
   /* border-style: initial;
   border-color: initial;
   border-image: initial; */
-  background: linear-gradient(
-      to right,
-      rgb(234, 234, 234),
-      rgb(237, 28, 36),
-      rgb(234, 234, 234)
-    );
+  background: linear-gradient(to right, rgb(234, 234, 234), rgb(237, 28, 36), rgb(234, 234, 234));
   margin: 10px auto 20px;
 }
 .header-clinics {
@@ -327,7 +323,7 @@
 .catalog {
   width: 60%;
   float: left;
-  background-color: rgba(0, 255, 0,0.2);
+  background-color: rgba(0, 255, 0, 0.2);
   display: flex;
   justify-content: center;
 }
@@ -339,15 +335,18 @@
   text-decoration: none;
   color: green;
   padding: 0.2rem 0.5rem;
+  border-radius: 5px;
 }
 .catalog li {
   margin: 1rem 0.5rem;
 }
 .catalog .active,
 .catalog a:hover {
+  box-sizing: border-box;
   background-color: rgba(255, 0, 0, 0.8);
   color: #fff;
   transition: all 0.5s;
+  /* padding: 4px 8px; */
 }
 .news-letter {
   float: left;
@@ -386,6 +385,13 @@
   .navbar-logos {
     left: 2rem;
   }
+  .navbar-tabs {
+    overflow-x: scroll;
+    padding-left: 30px;
+  }
+  .header-clinics {
+    font-size: 1.2rem;
+  }
   .navbar-logos .logo-text {
     font-size: 1rem;
   }
@@ -394,8 +400,8 @@
   }
   #navbar {
     height: 4.5rem;
-  } 
-  .navbar-tabs .navbar-items{
+  }
+  .navbar-tabs .navbar-items {
     height: 0.6rem;
     text-align: center;
     padding: 0.3rem 0.7rem 1rem;
@@ -420,7 +426,7 @@
     text-align: center;
     font-size: 1rem;
     margin: 0;
-    padding: 0.2rem 0;
+    /* padding: 0.2rem 0; */
   }
   .news-letter {
     /* border: 1px solid green; */
@@ -457,7 +463,7 @@
     height: 4rem;
   }
   .navbar-tabs .navbar-items {
-    padding: 0.3rem 0.7rem 0.5rem;
+    /* padding: 0.3rem 0.7rem 0.5rem; */
     font-size: 0.6rem;
   }
   .speciality-item {
@@ -466,5 +472,23 @@
   .coperator-img {
     margin: 0.2rem 0.45rem;
     max-height: 70px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .news-item {
+    flex-direction: column;
+    height: auto;
+    justify-content: space-evenly;
+  }
+  .catalog li a{
+    font-size: 12px;
+  }
+  .facility-item{
+    padding:10px;
+    width: 100px;
+  }
+  .facility-pic{
+    width: 100%;
   }
 }
