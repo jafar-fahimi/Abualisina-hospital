@@ -1,0 +1,65 @@
+.services-all,
+.doctors-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.services-pic {
+  width: 160px;
+  height: auto;
+  margin: 5px;
+}
+.services-pic:hover {
+  outline: 3px solid rgba(255, 19, 19, 0.7);
+  transition: all 0.1s linear;
+  cursor: pointer;
+}
+.header-clinics {
+  text-transform: uppercase;
+}
+.doctor-item {
+  box-shadow: 0 0 5px #999;
+  margin: 1rem;
+  width: 250px;
+  text-align: center;
+  background-color: aliceblue;
+}
+.doctor-pic {
+  width: 100%;
+  height: auto;
+}
+.doctor-speciality {
+  padding-left: 1rem;
+  margin-top: 0 !important;
+}
+.doctor-name {
+  margin-bottom: 0 !important;
+  padding-left: 1rem;
+  color: green !important;
+}
+
+@media screen and (max-width: 768px) {
+  .contents-class {
+    width: 95%;
+  }
+  .services-pic {
+    width: auto;
+    margin: 3px;
+  }
+  .doctor-item {
+    transform: scale(0.7);
+    margin: 0;
+    width: 45%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .doctor-item p {
+    font-size: 0.7rem;
+  }
+  .services-pic {
+    width: 100px;
+    margin: 3px;
+  }
+}
